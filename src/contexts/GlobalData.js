@@ -383,7 +383,7 @@ const getChartData = async (client, oldestDateToFetch) => {
       }
     }
 
-    if (data) {
+    if (data && data.length > 0) {
       let dayIndexSet = new Set();
       let dayIndexArray = [];
       const oneDay = 24 * 60 * 60;

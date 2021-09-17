@@ -12,9 +12,14 @@ import AllPairsPage from "./pages/AllPairsPage";
 
 import SideNav from "./components/SideNav";
 import AccountLookup from "./pages/AccountLookup";
-import { OVERVIEW_TOKEN_BLACKLIST, PAIR_BLACKLIST } from "./constants";
+import {
+  OVERVIEW_TOKEN_BLACKLIST,
+  PAIR_BLACKLIST,
+  SupportedNetwork,
+} from "./constants";
 import LocalLoader from "./components/LocalLoader";
 import { useLatestBlocks } from "./contexts/Application";
+import { useSelectedNetwork } from "./contexts/Network";
 
 const AppWrapper = styled.div`
   position: relative;
@@ -89,7 +94,13 @@ const LayoutWrapper = ({ children, savedOpen, setSavedOpen }) => {
   );
 };
 
-const BLOCK_DIFFERENCE_THRESHOLD = 30;
+const DEFAULT_BLOCK_DIFFERENCE_THRESHOLD = 30;
+
+const BLOCK_DIFFERENCE_THRESHOLD = {
+  [SupportedNetwork.MAINNET]: DEFAULT_BLOCK_DIFFERENCE_THRESHOLD,
+  [SupportedNetwork.XDAI]: DEFAULT_BLOCK_DIFFERENCE_THRESHOLD,
+  [SupportedNetwork.ARBITRUM_ONE]: 200, // Arbitrum one has multiple blocks in the same second
+};
 
 function App() {
   const [savedOpen, setSavedOpen] = useState(false);
@@ -97,11 +108,16 @@ function App() {
   const globalData = useGlobalData();
   const globalChartData = useGlobalChartData();
   const [latestBlock, headBlock] = useLatestBlocks();
+  const selectedNetwork = useSelectedNetwork();
 
   // show warning
   const showWarning =
     headBlock && latestBlock
-      ? headBlock - latestBlock > BLOCK_DIFFERENCE_THRESHOLD
+      ? headBlock - latestBlock >
+        (selectedNetwork
+          ? BLOCK_DIFFERENCE_THRESHOLD[selectedNetwork] ||
+            DEFAULT_BLOCK_DIFFERENCE_THRESHOLD
+          : DEFAULT_BLOCK_DIFFERENCE_THRESHOLD)
       : false;
 
   return (

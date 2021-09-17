@@ -25,13 +25,13 @@ export const ChainIdForSupportedNetwork = Object.freeze({
 export const NETWORK_SUBGRAPH_URLS = Object.freeze({
   [SupportedNetwork.MAINNET]: "luzzif/swapr-mainnet-alpha",
   [SupportedNetwork.XDAI]: "luzzif/swapr-xdai",
-  [SupportedNetwork.ARBITRUM_ONE]: "luzzif/swapr-arbitrum-one",
+  [SupportedNetwork.ARBITRUM_ONE]: "luzzif/swapr-arbitrum-one-v2",
 });
 
 export const FACTORY_ADDRESS = {
   [SupportedNetwork.MAINNET]: "0xd34971BaB6E5E356fd250715F5dE0492BB070452",
   [SupportedNetwork.XDAI]: "0x5d48c95adffd4b40c1aaadc4e08fc44117e02179",
-  [SupportedNetwork.ARBITRUM_ONE]: "0xbf9173b60a30b9ff8c37cac787b6ee87d5e47916",
+  [SupportedNetwork.ARBITRUM_ONE]: "0x359f20ad0f42d75a5077e65f30274cabe6f4f01a",
 };
 
 export const NATIVE_CURRENCY_SYMBOL = {
@@ -62,8 +62,8 @@ export const DXD_ADDRESS = {
 };
 
 export const SWPR_ADDRESS = {
-  [SupportedNetwork.MAINNET]: "0xe54942077Df7b8EEf8D4e6bCe2f7B58B0082b0cd",
-  [SupportedNetwork.ARBITRUM_ONE]: "0x955b9fe60a5b5093df9Dc4B1B18ec8e934e77162",
+  [SupportedNetwork.MAINNET]: "0x6cacdb97e3fc8136805a9e7c342d866ab77d0957",
+  [SupportedNetwork.ARBITRUM_ONE]: "0xde903e2712288a1da82942dddf2c20529565ac30",
 };
 
 export const ETHERSCAN_PREFIXES = {
