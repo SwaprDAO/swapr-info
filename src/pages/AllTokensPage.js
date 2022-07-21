@@ -23,7 +23,7 @@ function AllTokensPage() {
     <PageWrapper>
       <FullWrapper>
         <Flex alignItems={'flex-end'} justifyContent={'space-between'}>
-          <Typography.largeHeader>Top Tokens</Typography.largeHeader>
+          <Typography.LargeHeader>Top Tokens</Typography.LargeHeader>
           {!below600 && <Search small={true} />}
         </Flex>
         <Panel style={{ padding: below600 && '1rem 0 0 0 ' }}>

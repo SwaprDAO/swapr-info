@@ -71,9 +71,9 @@ function GlobalPage() {
       <ContentWrapper>
         <div>
           <AutoColumn gap="24px" style={{ paddingBottom: below800 ? '0' : '24px' }}>
-            <Typography.largeHeader>
+            <Typography.LargeHeader>
               {below800 ? 'Protocol Analytics' : 'Swapr Protocol Analytics'}
-            </Typography.largeHeader>
+            </Typography.LargeHeader>
             <Search />
             <GlobalStats />
           </AutoColumn>

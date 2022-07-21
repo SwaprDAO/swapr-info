@@ -8,14 +8,17 @@ const Polling = () => {
   const seconds = useSessionStart();
 
   return (
-    <Wrapper>
+    <Wrapper width="120">
       <InlineLink href="/">
-        <Typography.tinyText sx={{ marginRight: '6px' }} color={'text10'}>
+        <Typography.SmallText sx={{ marginRight: '6px' }} color={'text10'}>
           Updated
-        </Typography.tinyText>
-        <Typography.tinyText sx={{ marginRight: '6px' }} color={'green1'}>
-          {seconds ? seconds : '-'}s ago
-        </Typography.tinyText>
+        </Typography.SmallText>
+        <Typography.SmallText
+          sx={{ marginRight: '6px', fontFeatureSettings: '"tnum", "zero", "ss01"' }}
+          color={'green1'}
+        >
+          {seconds ?? '-'}s ago
+        </Typography.SmallText>
         <PollingDot />
       </InlineLink>
     </Wrapper>

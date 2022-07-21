@@ -159,9 +159,9 @@ const DashboardPage = ({ history }) => {
   return (
     <PageWrapper>
       <ContentWrapper>
-        <Typography.largeHeader>
+        <Typography.LargeHeader>
           {below800 ? 'Analytics Dashboard' : 'Swapr Protocol Analytics Dashboard'}
-        </Typography.largeHeader>
+        </Typography.LargeHeader>
         {formattedLiquidityData && (
           <>
             {below800 ? (

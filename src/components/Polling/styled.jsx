@@ -2,10 +2,10 @@ import { Flex } from 'rebass';
 import styled from 'styled-components';
 
 const Wrapper = styled(Flex)`
-  width: 115px;
+  width: ${({ width }) => `${width ?? 115}px`};
   align-items: center;
   justify-content: center;
-  border: 2px solid;
+  border: 1px solid;
   border-color: ${({ theme }) => theme.text10};
   border-radius: 6px
   padding: 3px;

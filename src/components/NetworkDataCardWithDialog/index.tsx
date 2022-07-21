@@ -39,9 +39,9 @@ const NetworkDataCardWithDialog = ({
         <Title>
           {icon}
           {/* FIXME: fix when we convert the whole project to ts */}
-          <Typography.smallHeader sx={''} color={''} className={''}>
+          <Typography.SmallHeader sx={''} color={''} className={''}>
             {title}
-          </Typography.smallHeader>
+          </Typography.SmallHeader>
         </Title>
         <OpenChartIcon size={24} onClick={toggleDialog} />
       </Header>

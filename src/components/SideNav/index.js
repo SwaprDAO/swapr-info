@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Option = styled(Typography.largeText)`
+export const Option = styled(Typography.LargeText)`
   color: ${({ activeText, theme }) => (activeText ? theme.text1 : theme.text10)};
   display: flex;
   align-items: center;
@@ -83,8 +83,8 @@ const MenuIcon = styled(Menu)`
 const GasInfo = styled.div`
   display: flex;
   margin-left: 12px;
-  padding: 3px 4px;
-  border: 2px solid rgba(242, 153, 74, 0.65);
+  padding: 4px 5px;
+  border: 1px solid rgba(242, 153, 74, 0.65);
   background: rgba(242, 153, 74, 0.08);
   border-radius: 6px;
 
@@ -242,49 +242,49 @@ function SideNav({ history }) {
             )}
           </AutoColumn>
           <AutoColumn gap={'12px'} style={{ marginBottom: '4rem' }}>
-            <Typography.text>
+            <Typography.Text>
               <Link external={true} color={'text10'} href="https://swapr.eth.limo">
                 Swapr
               </Link>
-            </Typography.text>
-            <Typography.text>
+            </Typography.Text>
+            <Typography.Text>
               <Link external={true} color={'text10'} href="https://dxdao.eth.limo">
                 DXdao
               </Link>
-            </Typography.text>
-            <Typography.text>
+            </Typography.Text>
+            <Typography.Text>
               <Link external={true} color={'text10'} href="https://twitter.com/SwaprEth">
                 Twitter
               </Link>
-            </Typography.text>
-            <Typography.text>
+            </Typography.Text>
+            <Typography.Text>
               <Link external={true} color={'text10'} href="https://discord.com/invite/4QXEJQkvHH">
                 Discord
               </Link>
-            </Typography.text>
-            <Typography.text>
+            </Typography.Text>
+            <Typography.Text>
               <Link external={true} color={'text10'} href="https://github.com/SwaprDAO/swapr-info">
                 Github
               </Link>
-            </Typography.text>
-            <Typography.text>
+            </Typography.Text>
+            <Typography.Text>
               <Link external={true} color={'text10'} href="https://dxdocs.eth.limo">
                 DXdocs
               </Link>
-            </Typography.text>
+            </Typography.Text>
             <Flex marginTop={'6px'}>
-              <Typography.smallText sx={{ marginRight: '16px' }}>
+              <Typography.SmallText sx={{ marginRight: '16px' }}>
                 {nativeCurrencySymbol}:{' '}
-                <Typography.custom sx={{ display: 'inline', fontWeight: 700, fontSize: 10 }}>
+                <Typography.Custom sx={{ display: 'inline', fontWeight: 700, fontSize: 10 }}>
                   {formattedNativeCurrencyPrice}
-                </Typography.custom>
-              </Typography.smallText>
-              <Typography.smallText>
+                </Typography.Custom>
+              </Typography.SmallText>
+              <Typography.SmallText>
                 SWPR:{' '}
-                <Typography.custom sx={{ display: 'inline', fontWeight: 700, fontSize: 10 }}>
+                <Typography.Custom sx={{ display: 'inline', fontWeight: 700, fontSize: 10 }}>
                   {formattedSwprPrice}
-                </Typography.custom>
-              </Typography.smallText>
+                </Typography.Custom>
+              </Typography.SmallText>
             </Flex>
             {!below1180 && (
               <Flex>
@@ -292,7 +292,7 @@ function SideNav({ history }) {
                 {gas.normal > 0 && (
                   <GasInfo>
                     <GasInfoSvg />
-                    <Typography.tinyText sx={{ marginLeft: '2px' }}>{gas.normal}</Typography.tinyText>
+                    <Typography.TinyText sx={{ marginLeft: '2px' }}>{gas.normal}</Typography.TinyText>
                   </GasInfo>
                 )}
               </Flex>

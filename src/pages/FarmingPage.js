@@ -35,7 +35,7 @@ function FarmingPage() {
     <PageWrapper>
       <FullWrapper>
         <Flex alignItems={'flex-end'} justifyContent={'space-between'}>
-          <Typography.largeHeader>Farming</Typography.largeHeader>
+          <Typography.LargeHeader>Farming</Typography.LargeHeader>
           {!below800 && <Search small={true} />}
         </Flex>
         <DropdownBasicSelect

@@ -18,14 +18,14 @@ const Header = ({
 }) => (
   <Container>
     <div>
-      <Typography.smallHeader sx={{ textTransform: 'uppercase', marginBottom: 12 }}>{title}</Typography.smallHeader>
+      <Typography.SmallHeader sx={{ textTransform: 'uppercase', marginBottom: 12 }}>{title}</Typography.SmallHeader>
       <FlexContainer>
-        <Typography.largeBoldHeader sx={{ marginRight: 10 }}>
+        <Typography.LargeBoldHeader sx={{ marginRight: 10 }}>
           {isValueCurrency && '$'} {value}
-        </Typography.largeBoldHeader>
+        </Typography.LargeBoldHeader>
         <DailyChange>{dailyChange}</DailyChange>
       </FlexContainer>
-      <Typography.text>{date}</Typography.text>
+      <Typography.Text>{date}</Typography.Text>
     </div>
     {showTimeFilter && (
       <div>

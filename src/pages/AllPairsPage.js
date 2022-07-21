@@ -23,7 +23,7 @@ function AllPairsPage() {
     <PageWrapper>
       <FullWrapper>
         <Flex alignItems={'flex-end'} justifyContent={'space-between'}>
-          <Typography.largeHeader>Top Pairs</Typography.largeHeader>
+          <Typography.LargeHeader>Top Pairs</Typography.LargeHeader>
           {!below800 && <Search small={true} />}
         </Flex>
         <Panel style={{ padding: below800 && '1rem 0 0 0 ' }}>

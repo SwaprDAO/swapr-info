@@ -24,18 +24,18 @@ export default function DropdownBasicSelect({ options, active, disabled, setActi
     <Wrapper open={showDropdown} color={color} ref={containerRef} width={width} disabled={disabled}>
       {disabled ? (
         <RowBetween justify={'center'}>
-          <Typography.smallHeader sx={{ display: 'flex' }} color={'disabled'}>
+          <Typography.SmallHeader sx={{ display: 'flex' }} color={'disabled'}>
             {active}
-          </Typography.smallHeader>
+          </Typography.SmallHeader>
           <StyledIcon disabled={disabled}>
             <ArrowStyled />
           </StyledIcon>
         </RowBetween>
       ) : (
         <RowBetween onClick={() => toggleDropdown(!showDropdown)} justify={'center'}>
-          <Typography.smallHeader sx={{ display: 'flex' }} color={'text8'}>
+          <Typography.SmallHeader sx={{ display: 'flex' }} color={'text8'}>
             {active}
-          </Typography.smallHeader>
+          </Typography.SmallHeader>
           <StyledIcon>
             <Icon icon={<ArrowStyled />} color={'text8'} />
           </StyledIcon>
@@ -56,12 +56,12 @@ export default function DropdownBasicSelect({ options, active, disabled, setActi
                       }}
                       key={index}
                     >
-                      <Typography.smallHeader
+                      <Typography.SmallHeader
                         color={'text8'}
                         sx={{ display: 'flex', ':hover': { color: darkMode ? '#EBE9F8' : '#464366' } }}
                       >
                         {option}
-                      </Typography.smallHeader>
+                      </Typography.SmallHeader>
                     </Row>
                   )
                 );

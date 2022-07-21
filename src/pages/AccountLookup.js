@@ -36,7 +36,7 @@ function AccountLookup() {
     <PageWrapper>
       <FullWrapper>
         <Flex alignItems={'flex-end'} justifyContent={'space-between'}>
-          <Typography.largeHeader>Wallet analytics</Typography.largeHeader>
+          <Typography.LargeHeader>Wallet analytics</Typography.LargeHeader>
           {!below600 && <Search small={true} />}
         </Flex>
         <AccountWrapper>

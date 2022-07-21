@@ -477,15 +477,15 @@ export function rawPercent(percentRaw) {
 export function formattedPercent(percent = false) {
   percent = parseFloat(percent);
   if (!percent || percent === 0) {
-    return <Typography.smallHeader color={'text1'}>0%</Typography.smallHeader>;
+    return <Typography.SmallHeader color={'text1'}>0%</Typography.SmallHeader>;
   }
 
   if (percent < 0.0001 && percent > 0) {
-    return <Typography.smallHeader color={'green1'}>{'< 0.0001%'}</Typography.smallHeader>;
+    return <Typography.SmallHeader color={'green1'}>{'< 0.0001%'}</Typography.SmallHeader>;
   }
 
   if (percent < 0 && percent > -0.0001) {
-    return <Typography.smallHeader color={'red1'}>{'< 0.0001%'}</Typography.smallHeader>;
+    return <Typography.SmallHeader color={'red1'}>{'< 0.0001%'}</Typography.SmallHeader>;
   }
 
   let fixedPercent = percent.toFixed(2);
@@ -495,13 +495,13 @@ export function formattedPercent(percent = false) {
   if (fixedPercent > 0) {
     if (fixedPercent > 100) {
       return (
-        <Typography.smallHeader color={'green1'}>{`+${percent?.toFixed(0).toLocaleString()}%`}</Typography.smallHeader>
+        <Typography.SmallHeader color={'green1'}>{`+${percent?.toFixed(0).toLocaleString()}%`}</Typography.SmallHeader>
       );
     } else {
-      return <Typography.smallHeader color={'green1'}>{`+${fixedPercent}%`}</Typography.smallHeader>;
+      return <Typography.SmallHeader color={'green1'}>{`+${fixedPercent}%`}</Typography.SmallHeader>;
     }
   } else {
-    return <Typography.smallHeader color={'red1'}>{`${fixedPercent}%`}</Typography.smallHeader>;
+    return <Typography.SmallHeader color={'red1'}>{`${fixedPercent}%`}</Typography.SmallHeader>;
   }
 }
 
